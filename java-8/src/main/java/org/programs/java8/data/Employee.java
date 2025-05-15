@@ -9,13 +9,16 @@ public class Employee {
     private String lastName;
     private BigDecimal salary;
     private List<String> phoneNumber;
+    private String grade;
 
-    public Employee(Long id, String firstName, String lastName, BigDecimal salary, List<String> phoneNumber) {
+    public Employee(Long id, String firstName, String lastName,
+                    BigDecimal salary, List<String> phoneNumber, String grade) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.phoneNumber = phoneNumber;
+        this.grade = grade;
     }
 
 
@@ -57,5 +60,13 @@ public class Employee {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 }
