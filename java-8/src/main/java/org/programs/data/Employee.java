@@ -1,4 +1,4 @@
-package org.programs.java8.data;
+package org.programs.data;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -68,5 +68,17 @@ public class Employee {
 
     public void setGrade(String grade) {
         this.grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                ", phoneNumber=" + phoneNumber +
+                ", grade='" + grade + '\'' +
+                '}';
     }
 }

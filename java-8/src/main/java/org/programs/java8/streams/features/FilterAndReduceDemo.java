@@ -1,7 +1,7 @@
-package org.programs.java8.streams;
+package org.programs.java8.streams.features;
 
-import org.programs.java8.data.Employee;
-import org.programs.java8.data.EmployeeGenerator;
+import org.programs.data.Employee;
+import org.programs.data.EmployeeGenerator;
 
 import java.math.BigDecimal;
 import java.util.List;
