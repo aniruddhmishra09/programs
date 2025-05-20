@@ -32,7 +32,7 @@ public class MyDemo1thMay {
         }
         //return distinctCharSet;
 
-        char[] chars ;
+        /*char[] chars ;
         for(String obj :inputStrings ){
             long distinct = obj.chars().distinct().count();
             if(distinct != obj.toCharArray().length){
@@ -43,14 +43,14 @@ public class MyDemo1thMay {
             }
 
         }
-        return chars;
+        return chars;*/
         /*inputStrings.stream()
 
                 .map(obj -> obj.chars())
 
                 .collect(Collectors.groupingBy(obj -> obj), Collectors.counting())
                 */
-
+    return null;
 
 
 

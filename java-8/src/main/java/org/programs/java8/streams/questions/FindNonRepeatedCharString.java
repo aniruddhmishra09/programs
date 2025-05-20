@@ -1,6 +1,7 @@
 package org.programs.java8.streams.questions;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -10,25 +11,22 @@ public class FindNonRepeatedCharString {
                 "Java",
                 "Program",
                 "abcxyz");
+
+        List<Map<Character, Long>> charsOfNonRepeatedCharInString = findCharsOfNonRepeatedCharInString(inputStrings);
+        System.out.println(charsOfNonRepeatedCharInString);
     }
 
-    public char[] findCharsOfNonRepeatedCharInString(List<String> inputStrings){
-        /*List<char[]> charArray = inputStrings
+    public static List<Map<Character, Long>> findCharsOfNonRepeatedCharInString(List<String> inputStrings){
+        return inputStrings
                 .stream()
-                .map(obj -> obj.toCharArray())
-                .collect(Collectors.toList());
-        charArray.stream()
+                .map(String::chars)
+                .toList().stream().map(obj -> obj.mapToObj(ch -> (char)ch)
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())))
+                        .filter(opt -> opt.entrySet().stream().filter(p -> p.getValue()> 1).findAny().orElseGet(() -> null) == null)
+                        .collect(Collectors.toList());
 
-                .map()
-                .collect(Collectors)
 
-        inputStrings.stream()
-                .flatMap(obj -> obj.toCharArray())
-                .toList()
-                .stream()
-                .flatMap(obj -> )
-                .collect(Collectors.groupingBy(Function.identity()), Collectors.counting());
-*/
-        return null;
+
+
     }
 }
