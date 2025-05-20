@@ -15,7 +15,8 @@ public class FindOccurrenceOfEachCharacter {
     }
 
     private static Map<Character, Long> getCountOfOccurrenceOfCharacter(String input){
-        return  input.chars().mapToObj(obj -> (char) obj).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        return  input.chars().mapToObj(obj -> (char) obj)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
 
